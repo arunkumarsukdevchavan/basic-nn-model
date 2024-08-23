@@ -19,6 +19,8 @@ Design and implement a neural network regression model to accurately predict a c
 - STEP 7:Evaluate the model with the testing data.
 
 ## Program:
+#### Developed By: ARUN KUMAR SUKDEV CHAVAN - 212222230013
+
 ```python
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
@@ -79,4 +81,4 @@ model.predict(pscale)
 ### Result:
 Thus a neural network regression model for the given dataset is developed and the prediction for the given input is obtained accurately.
 
-Developed By: ARUN KUMAR SUKDEV CHAVAN - 212222230013
+
