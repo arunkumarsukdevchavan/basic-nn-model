@@ -74,11 +74,13 @@ model.predict(pscale)
 
 
 ##### Test Data Root Mean Squared Error:
-![image](https://github.com/user-attachments/assets/89685180-15f6-46d6-b65c-69ebadaa8449)
+![image](https://github.com/user-attachments/assets/f1626e3f-481e-47ad-9677-db933f24201b)
+
 
 
 ##### New Sample Data Prediction:
-![image](https://github.com/user-attachments/assets/aa0ad51d-fefa-43af-835a-50e2ace742a5)
+![image](https://github.com/user-attachments/assets/4fcc9615-32f7-4167-b12d-778d4a531b66)
+
 
 
 ### Result:
