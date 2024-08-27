@@ -56,13 +56,16 @@ model.predict(pscale)
 
 ### Dataset Information:
 ##### df.head()
-![image](https://github.com/user-attachments/assets/150b9a7d-3b4c-487c-8d16-a355314ae02f)
+![image](https://github.com/user-attachments/assets/1e287fd5-b8c1-4976-b54a-841fa9af7691)
+
 
 ##### df.info()
-![image](https://github.com/user-attachments/assets/48094091-1c3a-441a-b5ab-c58f97bce7b8)
+![image](https://github.com/user-attachments/assets/570dfc8c-2e10-4c9a-a401-066b0289f0a2)
+
 
 ##### df.describe()
-![image](https://github.com/user-attachments/assets/53a6c93f-a852-41e4-b098-4d501fd33458)
+![image](https://github.com/user-attachments/assets/1b57363f-212c-4833-870c-40a8cac57d44)
+
 
 
 
