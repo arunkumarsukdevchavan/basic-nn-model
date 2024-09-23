@@ -27,33 +27,22 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split as tts
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
-from google.colab import auth
-import gspread
-from google.auth import default
-auth.authenticate_user()
-creds, _ = default()
-gc = gspread.authorize(creds)
-worksheet = gc.open('Activation Function').sheet1
-data = worksheet.get_all_values()
-dataset1 = pd.DataFrame(data[1:], columns=data[0])
-dataset1 = dataset1.astype({'Input':'int'})
-dataset1 = dataset1.astype({'Output':'int'})
-dataset1.head()
-dataset1.describe()
-dataset1.info()
-X = dataset1[['Input']].values
-y = dataset1[['Output']].values
-X
-X_train,X_test,y_train,y_test = train_test_split(X,y,test_size = 0.33,random_state = 33)
-Scaler=MinMaxScaler()
-Scaler.fit(X_train)
-X_train1 = Scaler.transform(X_train)
+df=pd.read_csv("data.csv")
+df.head()
+df.describe()
+df.info()
+X=df[["Input"]].values
+Y=df[["Output"]].values
+xtrain,xtest,ytrain,ytest=tts(X,Y,test_size=0.3,random_state=0)
+scaler=MinMaxScaler()
+scaler.fit(xtrain)
+xtrainscaled=scaler.transform(xtrain)
 model=Sequential([Dense(units=4,activation='relu',input_shape=[1]),
                   Dense(units=6,activation='relu'),
                   Dense(units=4,activation='relu'),
                   Dense(units=1)])
 model.compile(optimizer='rmsprop',loss='mse')
-model.fit(X_train1,y_train,epochs=2000)
+model.fit(xtrainscaled,ytrain,epochs=2000)
 loss=pd.DataFrame(model.history.history)
 loss.plot()
 xtestscaled=scaler.transform(xtest)
@@ -67,35 +56,41 @@ model.predict(pscale)
 
 ### Dataset Information:
 ##### df.head()
-![image](https://github.com/user-attachments/assets/cc4d377a-5799-467f-97b5-3caad6b4616f)
+![image](https://github.com/user-attachments/assets/329cb717-0233-4c38-bd6e-4e9177f5f75c)
+
 
 
 
 ##### df.info()
-![image](https://github.com/user-attachments/assets/01c1b9b9-874e-493f-8582-0c1003903679)
+![image](https://github.com/user-attachments/assets/3232e518-82ec-4c70-8bae-267360534722)
+
 
 
 
 ##### df.describe()
-![image](https://github.com/user-attachments/assets/f2f79d2d-b67e-4d58-bd09-6b3227142060)
+![image](https://github.com/user-attachments/assets/770fb456-9eb2-4b5b-894f-2cfb8befb6df)
+
 
 
 
 
 
 ##### Training Loss Vs Iteration Plot:
-![image](https://github.com/user-attachments/assets/a00140d4-1748-4823-a30e-8c8befb6eaec)
+![image](https://github.com/user-attachments/assets/7afac966-cd56-4227-89cb-3fd4e4f4b8a4)
+
 
 
 
 ##### Test Data Root Mean Squared Error:
-![image](https://github.com/user-attachments/assets/875f5cf9-5440-4a6a-8183-dfb1d994fb6d)
+![image](https://github.com/user-attachments/assets/2dd87cd4-5e97-4f6e-91dc-33a1aaa6d2d7)
+
 
 
 
 
 ##### New Sample Data Prediction:
-![image](https://github.com/user-attachments/assets/83c615aa-8eab-4b9f-93fa-bedb1d2791b5)
+![image](https://github.com/user-attachments/assets/58bdd753-ac31-418c-99e0-213ce5e46417)
+
 
 
 
