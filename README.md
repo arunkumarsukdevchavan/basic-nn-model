@@ -62,13 +62,15 @@ model.predict(pscale)
 
 
 ##### df.info()
-![image](https://github.com/user-attachments/assets/3232e518-82ec-4c70-8bae-267360534722)
+![image](https://github.com/user-attachments/assets/f7db1446-e259-4c12-a3e8-710dbbbaa369)
+
 
 
 
 
 ##### df.describe()
-![image](https://github.com/user-attachments/assets/770fb456-9eb2-4b5b-894f-2cfb8befb6df)
+![image](https://github.com/user-attachments/assets/9d88f52d-5f52-48bb-b75c-103b78beea97)
+
 
 
 
@@ -76,20 +78,23 @@ model.predict(pscale)
 
 
 ##### Training Loss Vs Iteration Plot:
-![image](https://github.com/user-attachments/assets/7afac966-cd56-4227-89cb-3fd4e4f4b8a4)
+![image](https://github.com/user-attachments/assets/0aa2ec91-dfb4-431c-a585-76b129d19e63)
+
 
 
 
 
 ##### Test Data Root Mean Squared Error:
-![image](https://github.com/user-attachments/assets/2dd87cd4-5e97-4f6e-91dc-33a1aaa6d2d7)
+![image](https://github.com/user-attachments/assets/2a16cf27-08ff-479e-9877-29e866c5e78e)
+
 
 
 
 
 
 ##### New Sample Data Prediction:
-![image](https://github.com/user-attachments/assets/58bdd753-ac31-418c-99e0-213ce5e46417)
+![image](https://github.com/user-attachments/assets/9624aa53-6092-4af9-8eab-4797f13e3081)
+
 
 
 
